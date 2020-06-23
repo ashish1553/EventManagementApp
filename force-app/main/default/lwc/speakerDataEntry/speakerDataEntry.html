@@ -1,0 +1,61 @@
+<template>
+    <lightning-card>
+
+
+        <div class="slds-p-around_x-small">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Select">Select</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Name">Session Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Type">Type</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Label">Label</div>
+                        </th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={Sess} for:item="ses"> 
+                        <tr key={ses.Id} class="slds-hint-parent">
+                            <td>
+                                <div class="slds-truncate" title="Select">
+                                    <lightning-input 
+                                    type="checkbox-button" 
+                                    label="Select" 
+                                    variant="label-hidden" 
+                                    key={ses.Id} 
+                                    name={ses.Id}
+                                    onchange={handleChangeEvent} 
+                                    data-value={ses.Id}>
+                                    </lightning-input>
+                                </div>
+                            </td>                                
+                            <td>
+                                <div class="slds-truncate" title="Name">{ses.Name}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title="Type">{ses.Type__c}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title="Level">{ses.Level__c}</div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </lightning-card>
+
+
+
+
+</template>

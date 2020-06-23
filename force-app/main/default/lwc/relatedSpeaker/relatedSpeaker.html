@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Related Speakers" icon-name="utility:table">
+    <div class="slds-m-around_small">
+        <div id="dataTable" style="height: 200px;">
+            <lightning-datatable
+            key-field="id"
+            data={data}
+            columns={columns}
+            onrowaction={handleRowAction}
+            row-number-offset={rowOffset}
+            hide-checkbox-column="true">
+            </lightning-datatable>
+        </div>
+
+
+
+
+
+    </div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Query Selector" icon-name="standard:search">
+        <div class="slds-m-around_small">
+            <lightning-combobox
+                name="type"
+                label="Type"
+                value={typeValue}
+                placeholder="Select Tyoe"
+                options={typeOptions}
+                onchange={handleChangeType} >
+            </lightning-combobox>
+            <lightning-combobox
+                name="level"
+                label="Level"
+                value={levelValue}
+                placeholder="Select Level"
+                options={levelOptions}
+                onchange={handleChangeLevel} >
+            </lightning-combobox>
+        </div>
+        <div class="slds-m-around_small">
+            <lightning-button variant="brand" label="Search" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+
+
+    </lightning-card>
+</template>
